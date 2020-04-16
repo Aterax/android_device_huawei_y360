@@ -1,0 +1,13 @@
+# Mount point     FStype     Device                                   Flags
+
+/boot             emmc       /dev/bootimg
+/logo             emmc       /dev/logo                                flags=display="Logo";backup=1
+/nvram            emmc       /dev/nvram                               flags=display="NVRAM";backup=1
+/recovery         emmc       /dev/recovery                            flags=display="Recovery";backup=1     
+/system           ext4       /dev/block/mmcblk0p6
+/cache            ext4       /dev/block/mmcblk0p7
+/data             ext4       /dev/block/mmcblk0p8
+
+# Removable storage
+/external_sd      auto       /dev/block/mmcblk1p1                     flags=display="SD_EXT";storage;wipeingui;removable;backup=0
+#/usb-otg         auto       /dev/block/sda1 /dev/block/sda           flags=display="USB OTG";storage;wipeingui;removable;backup=0
