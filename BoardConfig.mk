@@ -47,8 +47,11 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # TWRP specific build flags
 TARGET_RECOVERY_FSTAB := device/Huawei/Y360/recovery/root/etc/recovery.fstab
 TW_THEME := portrait_hdpi
-TW_EXCLUDE_MTP := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
 TW_NO_REBOOT_BOOTLOADER := true
+TW_NO_USB_STORAGE := true
+TW_EXCLUDE_SUPERSU := false
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
